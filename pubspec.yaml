@@ -1,0 +1,32 @@
+name: water_atm_demo
+description: An empty aquedart application.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+
+  aquedart: ^5.0.1
+  phantom_model_manager:
+    path: /home/genius/Documents/phantom/shared/phantom_model_manager
+    # git:
+      # url: git@github.com:EddieKamau/phantom_wallet_shared.git
+      # path: phantom_model_manager
+
+  phantom_process_response:
+    path: /home/genius/Documents/phantom/shared/phantom_process_response
+
+dev_dependencies:
+  aquedart_test: ^3.0.0
+
+# aquedart:
+#     git:
+#       url: git://github.com/EddieKamau/aquedart.git
+#       path: aquedart
+
+# aquedart_test:
+#     git:
+#       url: git://github.com/EddieKamau/aquedart.git
+#       path: aquedart_test
