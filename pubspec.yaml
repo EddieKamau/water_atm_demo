@@ -8,18 +8,29 @@ environment:
 
 dependencies:
 
-  aquedart: ^5.0.1
-  phantom_model_manager:
-    path: /home/genius/Documents/phantom/shared/phantom_model_manager
+  aquedart: ^5.0.3
     # git:
-      # url: git@github.com:EddieKamau/phantom_wallet_shared.git
-      # path: phantom_model_manager
+    #   url: git://github.com/EddieKamau/aquedart.git
+    #   path: aquedart
+
+  phantom_model_manager:
+    # path: /home/genius/Documents/phantom/shared/phantom_model_manager
+    git:
+      url: git@github.com:EddieKamau/phantom_wallet_shared.git
+      path: phantom_model_manager
 
   phantom_process_response:
-    path: /home/genius/Documents/phantom/shared/phantom_process_response
+    # path: /home/genius/Documents/phantom/shared/phantom_process_response
+    git:
+      url: git@github.com:EddieKamau/phantom_wallet_shared.git
+      path: phantom_process_response
 
 dev_dependencies:
-  aquedart_test: ^3.0.0
+  # aquedart_test: ^3.0.0
+  # aquedart_test:
+  #   git:
+  #     url: git://github.com/EddieKamau/aquedart.git
+  #     path: aquedart_test
 
 # aquedart:
 #     git:

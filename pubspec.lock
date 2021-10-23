@@ -21,14 +21,7 @@ packages:
       name: aquedart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.2"
-  aquedart_test:
-    dependency: "direct dev"
-    description:
-      name: aquedart_test
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.0"
+    version: "5.0.3"
   args:
     dependency: transitive
     description:
@@ -50,13 +43,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.5.0"
-  boolean_selector:
-    dependency: transitive
-    description:
-      name: boolean_selector
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   bson:
     dependency: transitive
     description:
@@ -106,13 +92,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  coverage:
-    dependency: transitive
-    description:
-      name: coverage
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.3"
   crypto:
     dependency: transitive
     description:
@@ -141,13 +120,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
-  frontend_server_client:
-    dependency: transitive
-    description:
-      name: frontend_server_client
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.2"
   glob:
     dependency: transitive
     description:
@@ -169,13 +141,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.4"
-  http_multi_server:
-    dependency: transitive
-    description:
-      name: http_multi_server
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.1"
   http_parser:
     dependency: transitive
     description:
@@ -183,13 +148,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
-  io:
-    dependency: transitive
-    description:
-      name: io
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.3"
   js:
     dependency: transitive
     description:
@@ -218,13 +176,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  matcher:
-    dependency: transitive
-    description:
-      name: matcher
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.12.11"
   meta:
     dependency: transitive
     description:
@@ -232,13 +183,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  mime:
-    dependency: transitive
-    description:
-      name: mime
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0"
   mongo_dart:
     dependency: transitive
     description:
@@ -253,13 +197,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  node_preamble:
-    dependency: transitive
-    description:
-      name: node_preamble
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.1"
   open_api_data:
     dependency: transitive
     description:
@@ -291,16 +228,20 @@ packages:
   phantom_model_manager:
     dependency: "direct main"
     description:
-      path: "/home/genius/Documents/phantom/shared/phantom_model_manager"
-      relative: false
-    source: path
+      path: phantom_model_manager
+      ref: HEAD
+      resolved-ref: "4cf0d940bc1697c1005034d98d7886ed1f579b54"
+      url: "git@github.com:EddieKamau/phantom_wallet_shared.git"
+    source: git
     version: "0.0.2"
   phantom_process_response:
     dependency: "direct main"
     description:
-      path: "/home/genius/Documents/phantom/shared/phantom_process_response"
-      relative: false
-    source: path
+      path: phantom_process_response
+      ref: HEAD
+      resolved-ref: "4cf0d940bc1697c1005034d98d7886ed1f579b54"
+      url: "git@github.com:EddieKamau/phantom_wallet_shared.git"
+    source: git
     version: "1.0.0"
   pointycastle:
     dependency: transitive
@@ -379,48 +320,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  shelf:
-    dependency: transitive
-    description:
-      name: shelf
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
-  shelf_packages_handler:
-    dependency: transitive
-    description:
-      name: shelf_packages_handler
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.0"
-  shelf_static:
-    dependency: transitive
-    description:
-      name: shelf_static
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
-  shelf_web_socket:
-    dependency: transitive
-    description:
-      name: shelf_web_socket
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
-  source_map_stack_trace:
-    dependency: transitive
-    description:
-      name: source_map_stack_trace
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
-  source_maps:
-    dependency: transitive
-    description:
-      name: source_maps
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.10.10"
   source_span:
     dependency: transitive
     description:
@@ -435,13 +334,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.10.0"
-  stream_channel:
-    dependency: transitive
-    description:
-      name: stream_channel
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   string_scanner:
     dependency: transitive
     description:
@@ -456,27 +348,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  test:
-    dependency: transitive
-    description:
-      name: test
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.17.12"
-  test_api:
-    dependency: transitive
-    description:
-      name: test_api
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.3"
-  test_core:
-    dependency: transitive
-    description:
-      name: test_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.2"
   typed_data:
     dependency: transitive
     description:
@@ -498,31 +369,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.4"
-  vm_service:
-    dependency: transitive
-    description:
-      name: vm_service
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "7.3.0"
   watcher:
     dependency: transitive
     description:
       name: watcher
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0"
-  web_socket_channel:
-    dependency: transitive
-    description:
-      name: web_socket_channel
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
-  webkit_inspection_protocol:
-    dependency: transitive
-    description:
-      name: webkit_inspection_protocol
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
