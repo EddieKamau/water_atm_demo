@@ -1,5 +1,5 @@
 name: water_atm_demo
-description: An empty aquedart application.
+description: Water ATM API demo for managing cashles topup.
 version: 0.0.1
 publish_to: none
 
@@ -8,7 +8,8 @@ environment:
 
 dependencies:
 
-  aquedart: ^5.0.3
+  aquedart: ^5.0.4
+    # path: /home/genius/Documents/dart_packages/aquedart/aquedart
     # git:
     #   url: git://github.com/EddieKamau/aquedart.git
     #   path: aquedart
@@ -26,18 +27,4 @@ dependencies:
       path: phantom_process_response
 
 dev_dependencies:
-  # aquedart_test: ^3.0.0
-  # aquedart_test:
-  #   git:
-  #     url: git://github.com/EddieKamau/aquedart.git
-  #     path: aquedart_test
-
-# aquedart:
-#     git:
-#       url: git://github.com/EddieKamau/aquedart.git
-#       path: aquedart
-
-# aquedart_test:
-#     git:
-#       url: git://github.com/EddieKamau/aquedart.git
-#       path: aquedart_test
+  aquedart_test: ^3.0.0

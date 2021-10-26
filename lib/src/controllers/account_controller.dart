@@ -2,6 +2,8 @@ import 'package:phantom_model_manager/phantom_model_manager.dart';
 import 'package:water_atm_demo/src/models/account_model.dart';
 import 'package:water_atm_demo/water_atm_demo.dart';
 
+import 'utils/response_schemas.dart';
+
 class AccountController extends ResourceController {
   final AccountModel accountModel = AccountModel();
   
@@ -51,5 +53,33 @@ class AccountController extends ResourceController {
 
 
   }
+
+  @override
+  Map<String, APIResponse> documentOperationResponses(APIDocumentContext context, Operation? operation) {
+    switch (operation) {
+      case Operation.get():
+      case Operation.get('accountNo'):
+        return responseSchema;
+      default:
+      return super.documentOperationResponses(context, operation);
+    }
+  }
     
 }
+
+Map<String, APIResponse> get responseSchema =>{
+  ...successfulResponseSchema(
+    body: APISchemaObject.array(
+      ofSchema: APISchemaObject.object({
+        "accountNo": APISchemaObject.string(),
+        "balance": APISchemaObject.number(),
+      })
+    )
+  ),
+  ...failedResponseSchema(),
+  ...unauthorizedSchema(),
+  ...forbiddenSchema(),
+  ...notFoundSchema(resourceNotFound: true),
+  ...mehodNotAllowedSchema(),
+  ...serverErrorSchema(),
+};

@@ -4,6 +4,8 @@ import 'package:water_atm_demo/src/modules/transfer_tokens_module.dart';
 import 'package:water_atm_demo/src/serializers/transfer_token_serializer.dart';
 import 'package:water_atm_demo/water_atm_demo.dart';
 
+import 'utils/response_schemas.dart';
+
 class TransferTokenController extends ResourceController {
 
   final TransferActivityModel transferTokenModel = TransferActivityModel();
@@ -59,4 +61,50 @@ class TransferTokenController extends ResourceController {
     }
     
   }
+
+  @override
+  Map<String, APIResponse> documentOperationResponses(APIDocumentContext context, Operation? operation) {
+    switch (operation) {
+      case Operation.get():
+        return getResponseSchema;
+
+      case Operation.post():
+        return postResponseSchema;
+      default:
+      return super.documentOperationResponses(context, operation);
+    }
+  }
 }
+
+Map<String, APIResponse> get getResponseSchema =>{
+  ...successfulResponseSchema(
+    body: APISchemaObject.array(
+      ofSchema: APISchemaObject.object({
+        "fromAccount": APISchemaObject.string(),
+        "toAccount": APISchemaObject.string(),
+        "amount": APISchemaObject.number(),
+        "dateTime": APISchemaObject.string(),
+      })
+    )
+  ),
+  ...failedResponseSchema(),
+  ...unauthorizedSchema(),
+  ...forbiddenSchema(),
+  ...notFoundSchema(),
+  ...mehodNotAllowedSchema(),
+  ...serverErrorSchema(),
+};
+
+Map<String, APIResponse> get postResponseSchema =>{
+  ...successfulResponseSchema(
+    body: APISchemaObject.object({
+      'message': APISchemaObject.string()
+    })
+  ),
+  ...failedResponseSchema(failed: true, warning: true),
+  ...unauthorizedSchema(),
+  ...forbiddenSchema(),
+  ...notFoundSchema(),
+  ...mehodNotAllowedSchema(),
+  ...serverErrorSchema(),
+};

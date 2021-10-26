@@ -2,6 +2,8 @@ import 'package:water_atm_demo/src/models/account_model.dart';
 import 'package:water_atm_demo/src/models/model.dart';
 import 'package:water_atm_demo/water_atm_demo.dart';
 
+import 'utils/response_schemas.dart';
+
 class AccountActivitiesController extends ResourceController {
   final AccountActivityModel activityModel = AccountActivityModel();
   
@@ -50,4 +52,48 @@ class AccountActivitiesController extends ResourceController {
     }
     
   }
+
+  @override
+  String? documentOperationDescription(APIDocumentContext context, Operation? operation) {
+    switch (operation) {
+      case Operation.get():
+        return "Fecth all account activities for all accounts";
+      case Operation.get('accountNo'):
+        return "Fecth all account activities for the 'accountNo'";
+      default:
+      return super.documentOperationDescription(context, operation);
+    }
+    
+  }
+
+  @override
+  Map<String, APIResponse> documentOperationResponses(APIDocumentContext context, Operation? operation) {
+    switch (operation) {
+      case Operation.get():
+      case Operation.get('accountNo'):
+        return responseSchema;
+      default:
+      return super.documentOperationResponses(context, operation);
+    }
+  }
 }
+
+Map<String, APIResponse> get responseSchema =>{
+  ...successfulResponseSchema(
+    body: APISchemaObject.array(
+      ofSchema: APISchemaObject.object({
+        "accountNo": APISchemaObject.string(),
+        "activityType": APISchemaObject.string(),
+        "amount": APISchemaObject.number(),
+        "dateTime": APISchemaObject.string(),
+        "metadata": APISchemaObject.object({}),
+      })
+    )
+  ),
+  ...failedResponseSchema(),
+  ...unauthorizedSchema(),
+  ...forbiddenSchema(),
+  ...notFoundSchema(resourceNotFound: true),
+  ...mehodNotAllowedSchema(),
+  ...serverErrorSchema(),
+};
